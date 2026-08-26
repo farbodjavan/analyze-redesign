@@ -1,6 +1,6 @@
 {
   "name": "analyze-redesign",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Evidence-based, multidisciplinary UX/UI analysis and implementation-ready redesign workflows with privacy-gated public evolution.",
   "author": {
     "name": "farbodjavan",
@@ -31,5 +31,6 @@
     "brandColor": "#F75858",
     "composerIcon": "./skills/analyze-redesign/assets/icon.svg",
     "logo": "./skills/analyze-redesign/assets/icon.svg"
-  }
+  },
+  "license": "LicenseRef-Analyze-Redesign-No-Derivatives-1.0"
 }

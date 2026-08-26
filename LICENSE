@@ -1,0 +1,108 @@
+ANALYZE & REDESIGN SOURCE-AVAILABLE NO-DERIVATIVES LICENSE
+Version 1.0 — 26 August 2026
+
+Copyright (c) 2026 farbodjavan
+All rights reserved.
+
+This license governs the Analyze & Redesign plugin, skill instructions,
+references, scripts, assets, metadata, and documentation contained in this
+repository (collectively, the "Software").
+
+1. LIMITED PERMISSION
+
+Subject to full compliance with this license, the copyright holder grants each
+recipient a limited, non-exclusive, non-transferable, non-sublicensable,
+royalty-free permission to:
+
+a. view the Software;
+b. download, install, and run an exact, unmodified official release of the
+   Software for personal or internal organizational use; and
+c. make only the temporary, cache, and backup copies reasonably necessary for
+   that permitted use, provided those copies remain private, unmodified, and
+   accompanied by this license and all copyright notices.
+
+No other permission is granted.
+
+2. NO MODIFICATIONS OR DERIVATIVE WORKS
+
+You may not, without prior express written permission from the copyright holder:
+
+a. edit, alter, adapt, translate, transform, patch, merge, or otherwise modify
+   any part of the Software;
+b. create, publish, use, or distribute a derivative work or modified version;
+c. publish or maintain a modified branch, mirror, copy, or fork;
+d. submit or distribute a change, patch, pull request, or replacement file;
+e. remove, obscure, or alter this license, a copyright notice, provenance
+   record, integrity manifest, or technical protection; or
+f. enable, direct, or assist another person to perform a prohibited act.
+
+Only the copyright holder, or a person with the copyright holder's prior express
+written authorization, may modify the Software or publish a modified release.
+
+3. NO REDISTRIBUTION, SALE, OR HOSTING
+
+You may not redistribute, republish, sublicense, sell, lease, rent, host,
+commercialize, mirror, or make the Software or any substantial part of it
+available to another person. Each authorized user must obtain the official,
+unmodified release directly from the copyright holder's official repository or
+another location expressly approved in writing by the copyright holder.
+
+4. GITHUB PLATFORM RIGHTS
+
+A public GitHub repository may be viewed and technically forked as permitted by
+GitHub's Terms of Service and platform functionality. A GitHub-provided right to
+view, reproduce through a technical fork, or operate the service does not grant
+permission under this license to modify, use a modified copy, create derivative
+works, redistribute, publish, host, sell, or otherwise exploit the Software.
+
+5. OWNERSHIP AND RESERVATION OF RIGHTS
+
+The Software is licensed, not sold. The copyright holder retains all title,
+copyright, and other intellectual-property rights in the Software. All rights
+not expressly granted in Section 1 are reserved. No implied license, waiver,
+estoppel, patent license, trademark license, or right to use the name, identity,
+or branding of Analyze & Redesign is granted.
+
+This license does not claim ownership of a user's original output merely because
+the unmodified Software helped produce it. Any portion of the Software copied
+into an output remains subject to this license.
+
+6. TERMINATION
+
+This license terminates automatically and immediately upon any breach. After
+termination, you must stop using the Software and delete all copies under your
+control, except where retention is required by applicable law. Termination does
+not limit any remedy available to the copyright holder.
+
+7. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR
+A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, OR RELIABILITY. YOU
+ASSUME ALL RISK ARISING FROM USE OF THE SOFTWARE.
+
+8. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COPYRIGHT HOLDER WILL NOT
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOSS OF DATA, PROFITS, REVENUE,
+BUSINESS, OR GOODWILL, ARISING FROM OR RELATED TO THE SOFTWARE OR THIS LICENSE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+9. MANDATORY LAW AND SEVERABILITY
+
+Nothing in this license limits rights or exceptions that cannot lawfully be
+waived or restricted. If a provision is held unenforceable, it will be enforced
+to the maximum extent permitted and the remaining provisions will continue in
+effect.
+
+10. WRITTEN PERMISSION
+
+Any permission to modify, create derivative works, redistribute, publish, host,
+commercialize, or otherwise use the Software beyond Section 1 must be granted
+in advance in a written instrument signed or expressly issued by the copyright
+holder. Silence, repository visibility, access, a suggestion, or acceptance of
+a communication does not constitute permission.
+
+This is a proprietary source-available license. It is not an open-source or
+free-software license.
