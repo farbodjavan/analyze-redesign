@@ -56,6 +56,12 @@ def main() -> int:
         fail("Unsupported SYNC_MANIFEST.json schemaVersion")
     if manifest.get("skillName") != "analyze-redesign":
         fail("Unexpected skillName in SYNC_MANIFEST.json")
+    if manifest.get("authority") != "installed-personal-skill":
+        fail("SYNC_MANIFEST.json must name the installed personal skill as authority")
+    if manifest.get("syncDirection") != "installed-to-github-only":
+        fail("SYNC_MANIFEST.json must enforce installed-to-GitHub-only sync")
+    if manifest.get("repositoryImportAllowed") is not False:
+        fail("SYNC_MANIFEST.json must forbid repository imports into the personal skill")
     if manifest.get("canonicalPath") != "plugins/analyze-redesign/skills/analyze-redesign":
         fail("Unexpected canonicalPath in SYNC_MANIFEST.json")
     if manifest.get("hashAlgorithm") != "SHA-256":
@@ -186,7 +192,8 @@ def main() -> int:
     print(
         f"Validated {len(expected_paths)} canonical skill files, "
         f"{len(referenced_files)} routed references, plugin metadata, "
-        "marketplace metadata, immutable license, and evolution governance."
+        "marketplace metadata, one-way authority, immutable license, "
+        "and evolution governance."
     )
     return 0
 

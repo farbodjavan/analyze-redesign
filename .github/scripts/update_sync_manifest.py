@@ -61,6 +61,9 @@ def main() -> int:
     manifest = {
         "schemaVersion": 1,
         "skillName": "analyze-redesign",
+        "authority": "installed-personal-skill",
+        "syncDirection": "installed-to-github-only",
+        "repositoryImportAllowed": False,
         "pluginVersion": version,
         "canonicalPath": "plugins/analyze-redesign/skills/analyze-redesign",
         "hashAlgorithm": "SHA-256",
