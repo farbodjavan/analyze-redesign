@@ -82,6 +82,14 @@ The skill can also activate implicitly when a request clearly asks for UX/UI ana
 
 این مخزن نسخهٔ قابل‌نصب اسکیل `analyze-redesign` را نگه می‌دارد. برای نصب در یک حساب دیگر، پوشهٔ اصلی اسکیل را دانلود و در ChatGPT Work همراه با `@skill-creator` نصب کنید. برای استفادهٔ تیمی و نسخه‌بندی‌شده، مخزن را به‌عنوان Plugin Marketplace به Codex اضافه کنید. چرخهٔ رشد فقط از منابع عمومی معتبر استفاده می‌کند و حق خواندن یا انتشار گفتگوها، فایل‌های شخصی، پروژه‌های خصوصی، اسکرین‌شات‌ها، داده‌های تحلیلی یا اطلاعات ورود را ندارد.
 
+این مخزن متن‌باز نیست. نصب و استفاده از نسخهٔ رسمیِ دقیق و بدون تغییر مجاز است؛ هرگونه تغییر، اثر مشتق، فورک تغییریافته، پچ، Pull Request، بازنشر، فروش، میزبانی یا آینه‌سازی بدون اجازهٔ کتبی قبلی صاحب حق ممنوع است. متن کامل در [LICENSE](LICENSE) آمده است.
+
+## License
+
+This repository is governed by the [Analyze & Redesign Source-Available No-Derivatives License 1.0](LICENSE). You may install and use an exact, unmodified official release. Modification, derivative works, modified forks, patches, pull requests, redistribution, mirroring, sale, and hosting are prohibited without prior written permission from the copyright holder.
+
+This is not an open-source license. GitHub's public-repository terms may allow viewing and technical forking through GitHub, but that does not grant permission to modify, use a modified copy, or redistribute the Software.
+
 ## Safe autonomous evolution
 
 A scheduled maintainer periodically checks current public primary and authoritative sources for genuinely reusable improvements. It updates instructions and references through a reviewable branch, records public provenance, runs privacy and integrity gates, and publishes only after every check succeeds. If there is no material improvement, it creates no release.
@@ -102,6 +110,7 @@ The distributed skill is generated from the validated canonical public skill and
 - required files and local reference routing
 - valid plugin and marketplace JSON
 - exact SHA-256 digests for every canonical skill file
+- an immutable SHA-256 lock for the repository license
 - a strict public-path and file-type allowlist
 - absence of credentials, local paths, personal-data indicators, and account-specific identifiers
 - public-only evolution provenance and rollback rules

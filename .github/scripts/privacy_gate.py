@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import subprocess
@@ -87,6 +88,12 @@ def load_config() -> dict:
         fail(f"PUBLIC_SYNC_ALLOWLIST.json is invalid: {exc}")
     if config.get("schemaVersion") != 1:
         fail("Unsupported PUBLIC_SYNC_ALLOWLIST.json schemaVersion")
+    locked_files = config.get("lockedFiles", {})
+    if not isinstance(locked_files, dict) or not all(
+        isinstance(path, str) and isinstance(digest, str)
+        for path, digest in locked_files.items()
+    ):
+        fail("PUBLIC_SYNC_ALLOWLIST.json lockedFiles must map paths to SHA-256 digests")
     return config
 
 
@@ -150,6 +157,12 @@ def inspect_path(mode: str, path: str, config: dict) -> list[str]:
         findings.append("unreadable-file")
         return findings
 
+    locked_digest = config.get("lockedFiles", {}).get(path)
+    if locked_digest is not None:
+        actual_digest = hashlib.sha256(data).hexdigest()
+        if actual_digest != locked_digest:
+            findings.append("locked-file-modified")
+
     if len(data) > int(config["maxFileBytes"]):
         findings.append("file-too-large")
     if b"\0" in data:
@@ -172,8 +185,14 @@ def inspect_path(mode: str, path: str, config: dict) -> list[str]:
 def main() -> int:
     config = load_config()
     failures: list[tuple[str, str]] = []
+    entries = tracked_entries()
+    tracked_paths = {path for _mode, path in entries}
 
-    for mode, path in tracked_entries():
+    for path in sorted(config.get("lockedFiles", {})):
+        if path not in tracked_paths:
+            failures.append((path, "locked-file-missing"))
+
+    for mode, path in entries:
         for rule in inspect_path(mode, path, config):
             failures.append((path, rule))
 

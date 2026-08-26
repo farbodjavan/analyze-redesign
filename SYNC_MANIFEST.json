@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "skillName": "analyze-redesign",
-  "pluginVersion": "1.1.0",
+  "pluginVersion": "1.1.1",
   "canonicalPath": "plugins/analyze-redesign/skills/analyze-redesign",
   "hashAlgorithm": "SHA-256",
   "syncedOn": "2026-08-26",

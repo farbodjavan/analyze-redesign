@@ -10,6 +10,7 @@
     ".gitignore",
     "EVOLUTION_LOG.md",
     "EVOLUTION_POLICY.md",
+    "LICENSE",
     "PUBLIC_SYNC_ALLOWLIST.json",
     "README.md",
     "SYNC_MANIFEST.json",
@@ -80,5 +81,8 @@
     ".xlsx",
     ".zip"
   ],
-  "maxFileBytes": 524288
+  "maxFileBytes": 524288,
+  "lockedFiles": {
+    "LICENSE": "32d09f539a12996735c5723ad7c733584b91af86a8d9f0209931e6d150425ba4"
+  }
 }

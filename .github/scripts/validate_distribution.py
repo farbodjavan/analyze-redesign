@@ -17,6 +17,9 @@ MANIFEST_PATH = REPO_ROOT / "SYNC_MANIFEST.json"
 PLUGIN_MANIFEST_PATH = PLUGIN_ROOT / ".codex-plugin" / "plugin.json"
 MARKETPLACE_PATH = REPO_ROOT / ".agents" / "plugins" / "marketplace.json"
 ALLOWLIST_PATH = REPO_ROOT / "PUBLIC_SYNC_ALLOWLIST.json"
+LICENSE_PATH = REPO_ROOT / "LICENSE"
+LICENSE_ID = "LicenseRef-Analyze-Redesign-No-Derivatives-1.0"
+LICENSE_SHA256 = "32d09f539a12996735c5723ad7c733584b91af86a8d9f0209931e6d150425ba4"
 SEMVER = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
 
 
@@ -129,6 +132,8 @@ def main() -> int:
         fail("Plugin version differs from SYNC_MANIFEST.json")
     if plugin.get("skills") != "./skills/":
         fail("Plugin manifest skills path must be ./skills/")
+    if plugin.get("license") != LICENSE_ID:
+        fail(f"Plugin manifest license must be {LICENSE_ID}")
     interface = plugin.get("interface")
     if not isinstance(interface, dict) or interface.get("displayName") != "Analyze & Redesign":
         fail("Plugin interface metadata is incomplete")
@@ -163,6 +168,12 @@ def main() -> int:
     allowlist = read_json(ALLOWLIST_PATH)
     if allowlist.get("schemaVersion") != 1:
         fail("Unsupported PUBLIC_SYNC_ALLOWLIST.json schemaVersion")
+    if not LICENSE_PATH.is_file():
+        fail("Required LICENSE file is missing")
+    if sha256(LICENSE_PATH) != LICENSE_SHA256:
+        fail("LICENSE differs from the owner-approved immutable text")
+    if allowlist.get("lockedFiles", {}).get("LICENSE") != LICENSE_SHA256:
+        fail("PUBLIC_SYNC_ALLOWLIST.json must lock the approved LICENSE digest")
     for required in (
         REPO_ROOT / "EVOLUTION_POLICY.md",
         REPO_ROOT / "EVOLUTION_LOG.md",
@@ -175,7 +186,7 @@ def main() -> int:
     print(
         f"Validated {len(expected_paths)} canonical skill files, "
         f"{len(referenced_files)} routed references, plugin metadata, "
-        "marketplace metadata, and evolution governance."
+        "marketplace metadata, immutable license, and evolution governance."
     )
     return 0
 
