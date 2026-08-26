@@ -109,7 +109,7 @@ def main() -> int:
         for marker in forbidden_markers:
             if marker in content:
                 fail(f"Forbidden account-specific or secret marker in {path.relative_to(SKILL_ROOT)}")
-        if re.search(r"\\bskill-[0-9a-f]{32}\\b", content):
+        if re.search(r"\bskill-[0-9a-f]{32}\b", content):
             fail(f"Account-specific skill identifier in {path.relative_to(SKILL_ROOT)}")
 
     plugin = read_json(PLUGIN_MANIFEST_PATH)
