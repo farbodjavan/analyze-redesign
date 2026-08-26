@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "skillName": "analyze-redesign",
+  "pluginVersion": "1.0.0",
+  "canonicalPath": "plugins/analyze-redesign/skills/analyze-redesign",
+  "hashAlgorithm": "SHA-256",
+  "syncedOn": "2026-08-26",
+  "files": {
+    "SKILL.md": "f91898d65d141b8b1506807e8e7f4c217ef0afe8cd08543842b8122c0f5fc8b9",
+    "agents/openai.yaml": "c9aab790411fef62c895797460fe9221d030168d92c0e50f60b0a9ca6c91b087",
+    "assets/icon.svg": "e9301497fa98ef56aaca7ede0857b9a18dc06c34040f0679c609a6bf49b1d38b",
+    "references/accessibility-inclusion-trust.md": "b473e2797331b8fce1d58f0980bfcdcc49ed9ba3092a62feba5d01e49a055e25",
+    "references/deliverable-contracts.md": "3f37c499a428b1a72f63a67b372abc4f7ed0ed7ba8d0b5f959c2a52df0bd6432",
+    "references/design-council.md": "cd01e62cbbf0c64c08f1bdf5fd0664c571d5f880c749fa617c2c8daab7d6a44b",
+    "references/domain-lenses.md": "b19f7cb7f4f9a9376dc0699f764179074f07ac829b67b384d107c1d9bfb7c76e",
+    "references/evaluation-framework.md": "c3f5608d73bb5a329abd2fc15c19dfb06753980f2f9e28a7bfbbebaf7230066a",
+    "references/interaction-content-service.md": "39b44293581133a909a4dc8a849b71dbc89fae0340b2e3854db05ad705dd7909",
+    "references/platform-responsive-localization.md": "8dd0d3d3b7724db095a3e33ab7faf68495acfe91f6667ae88ceb3b5f80f45b2c",
+    "references/research-strategy-metrics.md": "b7835fc0ad7fee808c4751cd07ae750168a27755dfd60d2712efc0e8fb41da8c",
+    "references/source-registry.md": "392dc15e51e804a1952d370afdef0c18a8867f3451a483c8840ba8cd917e5a6d",
+    "references/verification-design-ops.md": "5dd2aefbb43205566df21981fcd54f072336af910cbcbc165d55c445b8954588",
+    "references/visual-systems-craft.md": "53e065952e732e52b2fc58e992122b4d04781cbeb18654b1ff838ca709386584"
+  }
+}

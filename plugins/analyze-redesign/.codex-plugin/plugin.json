@@ -1,0 +1,35 @@
+{
+  "name": "analyze-redesign",
+  "version": "1.0.0",
+  "description": "Evidence-based, multidisciplinary UX/UI analysis and implementation-ready redesign workflows.",
+  "author": {
+    "name": "farbodjavan",
+    "url": "https://github.com/farbodjavan"
+  },
+  "homepage": "https://github.com/farbodjavan/analyze-redesign",
+  "repository": "https://github.com/farbodjavan/analyze-redesign",
+  "keywords": [
+    "ux",
+    "ui",
+    "product-design",
+    "design-systems",
+    "accessibility",
+    "rtl",
+    "redesign"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Analyze & Redesign",
+    "shortDescription": "Multidisciplinary UX/UI audits and redesigns",
+    "longDescription": "Evidence-based product analysis, UX/UI audits, and implementation-ready redesigns with accessibility, localization, trust, metrics, and QA.",
+    "developerName": "farbodjavan",
+    "category": "Productivity",
+    "websiteURL": "https://github.com/farbodjavan/analyze-redesign",
+    "defaultPrompt": [
+      "Use @analyze-redesign to run a Deep Pass and produce an implementation-ready redesign with acceptance criteria and QA."
+    ],
+    "brandColor": "#F75858",
+    "composerIcon": "./skills/analyze-redesign/assets/icon.svg",
+    "logo": "./skills/analyze-redesign/assets/icon.svg"
+  }
+}

@@ -1,0 +1,14 @@
+interface:
+  display_name: تحلیل و ریدیزاین
+  short_description: شورای چندتخصصی برای تحلیل و ریدیزاین اجرایی
+  default_prompt: از $analyze-redesign برای ممیزی چندتخصصی و طراحی نسخهٔ اجرایی بهتر
+    این محصول استفاده کن.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
