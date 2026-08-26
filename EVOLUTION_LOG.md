@@ -2,6 +2,13 @@
 
 This log records only public, release-level changes. It never includes user prompts, project examples, private evaluation artifacts, account data, or unpublished sources.
 
+## 1.2.0 — 2026-08-26
+
+- Made the installed personal skill the sole authority for skill content and the public GitHub repository a downstream distribution only.
+- Prohibited every GitHub-to-personal-skill path, including imports from main, branches, pull requests, releases, marketplace updates, or workflow results.
+- Added machine-validated `installed-to-github-only` direction metadata and a repository-import prohibition.
+- Changed evolution order to author, validate, and save the personal skill first, then export an allowlisted public-safe snapshot to GitHub.
+
 ## 1.1.1 — 2026-08-26
 
 - Added the proprietary Analyze & Redesign Source-Available No-Derivatives License 1.0.
