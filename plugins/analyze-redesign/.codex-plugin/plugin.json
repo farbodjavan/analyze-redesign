@@ -1,7 +1,7 @@
 {
   "name": "analyze-redesign",
-  "version": "1.0.0",
-  "description": "Evidence-based, multidisciplinary UX/UI analysis and implementation-ready redesign workflows.",
+  "version": "1.1.0",
+  "description": "Evidence-based, multidisciplinary UX/UI analysis and implementation-ready redesign workflows with privacy-gated public evolution.",
   "author": {
     "name": "farbodjavan",
     "url": "https://github.com/farbodjavan"
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Analyze & Redesign",
     "shortDescription": "Multidisciplinary UX/UI audits and redesigns",
-    "longDescription": "Evidence-based product analysis, UX/UI audits, and implementation-ready redesigns with accessibility, localization, trust, metrics, and QA.",
+    "longDescription": "Evidence-based product analysis, UX/UI audits, and implementation-ready redesigns with accessibility, localization, trust, metrics, QA, and privacy-gated public knowledge evolution.",
     "developerName": "farbodjavan",
     "category": "Productivity",
     "websiteURL": "https://github.com/farbodjavan/analyze-redesign",

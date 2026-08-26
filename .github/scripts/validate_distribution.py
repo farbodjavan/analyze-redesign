@@ -16,6 +16,8 @@ SKILL_ROOT = PLUGIN_ROOT / "skills" / "analyze-redesign"
 MANIFEST_PATH = REPO_ROOT / "SYNC_MANIFEST.json"
 PLUGIN_MANIFEST_PATH = PLUGIN_ROOT / ".codex-plugin" / "plugin.json"
 MARKETPLACE_PATH = REPO_ROOT / ".agents" / "plugins" / "marketplace.json"
+ALLOWLIST_PATH = REPO_ROOT / "PUBLIC_SYNC_ALLOWLIST.json"
+SEMVER = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
 
 
 def fail(message: str) -> None:
@@ -24,13 +26,25 @@ def fail(message: str) -> None:
 
 def read_json(path: Path) -> dict:
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        value = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         fail(f"{path.relative_to(REPO_ROOT)} is not valid JSON: {exc}")
+    if not isinstance(value, dict):
+        fail(f"{path.relative_to(REPO_ROOT)} must contain a JSON object")
+    return value
 
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def ensure_inside_plugin(relative_path: str) -> Path:
+    resolved = (PLUGIN_ROOT / relative_path).resolve()
+    try:
+        resolved.relative_to(PLUGIN_ROOT.resolve())
+    except ValueError:
+        fail(f"Plugin path escapes the plugin root: {relative_path}")
+    return resolved
 
 
 def main() -> int:
@@ -43,6 +57,10 @@ def main() -> int:
         fail("Unexpected canonicalPath in SYNC_MANIFEST.json")
     if manifest.get("hashAlgorithm") != "SHA-256":
         fail("SYNC_MANIFEST.json must use SHA-256")
+    if manifest.get("evolutionPolicy") != "EVOLUTION_POLICY.md":
+        fail("SYNC_MANIFEST.json must route to EVOLUTION_POLICY.md")
+    if manifest.get("privacyGate") != ".github/scripts/privacy_gate.py":
+        fail("SYNC_MANIFEST.json must route to the privacy gate")
 
     expected = manifest.get("files")
     if not isinstance(expected, dict) or not expected:
@@ -86,36 +104,28 @@ def main() -> int:
     if not description_match or not description_match.group(1).strip("'\""):
         fail("SKILL.md frontmatter description must be non-empty")
 
-    referenced_files = sorted(
-        set(re.findall(r"\breferences/[A-Za-z0-9._/-]+\.md\b", skill_text))
+    referenced_files = set(
+        re.findall(r"\breferences/[A-Za-z0-9._/-]+\.md\b", skill_text)
     )
-    if not referenced_files:
-        fail("SKILL.md must route to reference files")
-    for relative_path in referenced_files:
-        if not (SKILL_ROOT / relative_path).is_file():
-            fail(f"SKILL.md references a missing file: {relative_path}")
-
-    forbidden_markers = (
-        "/root/.codex/",
-        "BEGIN OPENSSH PRIVATE KEY",
-        "BEGIN RSA PRIVATE KEY",
-        "github_pat_",
-        "ghp_",
-    )
-    for path in SKILL_ROOT.rglob("*"):
-        if not path.is_file():
-            continue
-        content = path.read_text(encoding="utf-8")
-        for marker in forbidden_markers:
-            if marker in content:
-                fail(f"Forbidden account-specific or secret marker in {path.relative_to(SKILL_ROOT)}")
-        if re.search(r"\bskill-[0-9a-f]{32}\b", content):
-            fail(f"Account-specific skill identifier in {path.relative_to(SKILL_ROOT)}")
+    routed_files = {
+        path.relative_to(SKILL_ROOT).as_posix()
+        for path in (SKILL_ROOT / "references").glob("*.md")
+    }
+    if referenced_files != routed_files:
+        missing_routes = sorted(routed_files - referenced_files)
+        missing_files = sorted(referenced_files - routed_files)
+        fail(
+            f"Reference routing differs; unrouted={missing_routes}, "
+            f"missing={missing_files}"
+        )
 
     plugin = read_json(PLUGIN_MANIFEST_PATH)
+    version = plugin.get("version")
     if plugin.get("name") != "analyze-redesign":
         fail("Plugin manifest name must be analyze-redesign")
-    if plugin.get("version") != manifest.get("pluginVersion"):
+    if not isinstance(version, str) or not SEMVER.fullmatch(version):
+        fail("Plugin manifest version must use MAJOR.MINOR.PATCH")
+    if version != manifest.get("pluginVersion"):
         fail("Plugin version differs from SYNC_MANIFEST.json")
     if plugin.get("skills") != "./skills/":
         fail("Plugin manifest skills path must be ./skills/")
@@ -124,7 +134,9 @@ def main() -> int:
         fail("Plugin interface metadata is incomplete")
     for icon_field in ("composerIcon", "logo"):
         icon_value = interface.get(icon_field)
-        if not isinstance(icon_value, str) or not (PLUGIN_ROOT / icon_value).is_file():
+        if not isinstance(icon_value, str):
+            fail(f"Plugin interface {icon_field} is missing")
+        if not ensure_inside_plugin(icon_value).is_file():
             fail(f"Plugin interface {icon_field} does not resolve to a file")
 
     marketplace = read_json(MARKETPLACE_PATH)
@@ -135,24 +147,35 @@ def main() -> int:
     if len(matching) != 1:
         fail("Marketplace must contain exactly one analyze-redesign entry")
     entry = matching[0]
-    expected_source = {
+    if entry.get("source") != {
         "source": "local",
         "path": "./plugins/analyze-redesign",
-    }
-    if entry.get("source") != expected_source:
+    }:
         fail("Marketplace source must target ./plugins/analyze-redesign")
     if entry.get("category") != "Productivity":
         fail("Marketplace category must be Productivity")
-    policy = entry.get("policy")
-    if policy != {
+    if entry.get("policy") != {
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL",
     }:
         fail("Marketplace policy is incomplete or unexpected")
 
+    allowlist = read_json(ALLOWLIST_PATH)
+    if allowlist.get("schemaVersion") != 1:
+        fail("Unsupported PUBLIC_SYNC_ALLOWLIST.json schemaVersion")
+    for required in (
+        REPO_ROOT / "EVOLUTION_POLICY.md",
+        REPO_ROOT / "EVOLUTION_LOG.md",
+        REPO_ROOT / ".github" / "scripts" / "privacy_gate.py",
+        REPO_ROOT / ".github" / "scripts" / "update_sync_manifest.py",
+    ):
+        if not required.is_file():
+            fail(f"Required governance file is missing: {required.relative_to(REPO_ROOT)}")
+
     print(
         f"Validated {len(expected_paths)} canonical skill files, "
-        f"{len(referenced_files)} routed references, plugin metadata, and marketplace metadata."
+        f"{len(referenced_files)} routed references, plugin metadata, "
+        "marketplace metadata, and evolution governance."
     )
     return 0
 

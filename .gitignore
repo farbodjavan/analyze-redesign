@@ -1,0 +1,52 @@
+# Never publish credentials or local configuration
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Never publish private work or generated project evidence
+private/
+confidential/
+projects/
+workspace/
+uploads/
+exports/
+artifacts/
+screenshots/
+recordings/
+builds/
+logs/
+analytics/
+backups/
+
+# Never publish binary bundles or application builds
+*.7z
+*.aab
+*.apk
+*.csv
+*.db
+*.doc
+*.docx
+*.gif
+*.gz
+*.jpeg
+*.jpg
+*.mov
+*.mp3
+*.mp4
+*.pdf
+*.png
+*.sqlite
+*.tar
+*.tsv
+*.wav
+*.webp
+*.xls
+*.xlsx
+*.zip
+
+# Local interpreter output
+__pycache__/
+*.py[cod]
