@@ -3,10 +3,16 @@ name: Validate distributed skill
 on:
   push:
   pull_request:
+  schedule:
+    - cron: "17 3 * * 1"
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -19,6 +25,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+
+      - name: Enforce public-only privacy boundary
+        run: python .github/scripts/privacy_gate.py
 
       - name: Validate skill distribution
         run: python .github/scripts/validate_distribution.py

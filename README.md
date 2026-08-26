@@ -36,7 +36,7 @@ The canonical skill directory is:
 plugins/analyze-redesign/skills/analyze-redesign
 ```
 
-`SYNC_MANIFEST.json` records the SHA-256 digest of every canonical skill file.
+`SYNC_MANIFEST.json` records the SHA-256 digest of every canonical skill file. `PUBLIC_SYNC_ALLOWLIST.json` and the privacy gate restrict what can ever be published.
 
 ## Install with Codex
 
@@ -80,14 +80,28 @@ The skill can also activate implicitly when a request clearly asks for UX/UI ana
 
 ## فارسی
 
-این مخزن نسخهٔ قابل‌نصب اسکیل `analyze-redesign` را نگه می‌دارد. برای نصب در یک حساب دیگر، پوشهٔ اصلی اسکیل را دانلود و در ChatGPT Work همراه با `@skill-creator` نصب کنید. برای استفادهٔ تیمی و نسخه‌بندی‌شده، مخزن را به‌عنوان Plugin Marketplace به Codex اضافه کنید.
+این مخزن نسخهٔ قابل‌نصب اسکیل `analyze-redesign` را نگه می‌دارد. برای نصب در یک حساب دیگر، پوشهٔ اصلی اسکیل را دانلود و در ChatGPT Work همراه با `@skill-creator` نصب کنید. برای استفادهٔ تیمی و نسخه‌بندی‌شده، مخزن را به‌عنوان Plugin Marketplace به Codex اضافه کنید. چرخهٔ رشد فقط از منابع عمومی معتبر استفاده می‌کند و حق خواندن یا انتشار گفتگوها، فایل‌های شخصی، پروژه‌های خصوصی، اسکرین‌شات‌ها، داده‌های تحلیلی یا اطلاعات ورود را ندارد.
+
+## Safe autonomous evolution
+
+A scheduled maintainer periodically checks current public primary and authoritative sources for genuinely reusable improvements. It updates instructions and references through a reviewable branch, records public provenance, runs privacy and integrity gates, and publishes only after every check succeeds. If there is no material improvement, it creates no release.
+
+This process does **not** train model weights or learn from private work. It is prohibited from reading or exporting chats, personal context, Library files, connected apps, private repositories, project files, screenshots, analytics, credentials, unpublished URLs, personal data, or customer data. See [EVOLUTION_POLICY.md](EVOLUTION_POLICY.md).
+
+Other installations can refresh a tracked marketplace with:
+
+```bash
+codex plugin marketplace upgrade farbodjavan-analyze-redesign
+```
 
 ## Integrity
 
-The distributed skill is copied from the validated personal skill and is checked for:
+The distributed skill is generated from the validated canonical public skill and is checked for:
 
 - valid `SKILL.md` frontmatter
 - required files and local reference routing
 - valid plugin and marketplace JSON
 - exact SHA-256 digests for every canonical skill file
-- absence of credentials and account-specific identifiers
+- a strict public-path and file-type allowlist
+- absence of credentials, local paths, personal-data indicators, and account-specific identifiers
+- public-only evolution provenance and rollback rules
