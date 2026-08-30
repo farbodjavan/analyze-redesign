@@ -57,12 +57,14 @@ Use the bundled scripts rather than recreating publication logic:
 4. Complete an explicit semantic-provenance review, record the actual forward-test result, and set the current release attestations only after those checks pass.
 5. Run `scripts/validate_skill.py --release`. This is the pre-export gate; it must fail while any source, privacy, structure, eval, forward-test, or semantic-provenance attestation is pending.
 6. Commit and save the authoritative personal-skill state before public preparation.
-7. Run `scripts/build_public_snapshot.py` into a newly created temporary destination. The builder invokes the release gate, copies only the explicit allowlist, refuses symlinks and path traversal, preserves executable modes, hashes every file, runs strict-tree privacy, verifies post-copy integrity, and creates a machine-readable manifest.
+7. Run `scripts/build_public_snapshot.py` into a newly created temporary destination. The builder invokes the release gate, copies only the explicit allowlist, refuses symlinks and path traversal, records regular-file modes, hashes every file, runs strict-tree privacy, verifies post-copy integrity, and creates a machine-readable manifest.
 8. Check out the exact candidate commit and use `scripts/reconcile_public_target.py` with that full commit ID and an external exact preservation policy. The tool must derive every path, SHA-256 digest, and regular-file mode itself from `git ls-tree` and Git objects, require the checkout `HEAD` to equal the requested commit, make canonical skill paths equal the snapshot, require every outside legal/governance file to be individually named and hashed, and reject symlink/submodule modes. Never trust a caller-supplied partial inventory. This prevents an overlay from leaving an unreviewed file behind.
 9. Publish through a branch and reviewable change, wait for all required checks on the exact head revision, then merge only that unchanged revision.
 10. Re-inventory the published head and run the same exact reconciliation. Never reconcile the personal source from the repository.
 
 The repository license and other locked legal/governance files are outside the automatic skill snapshot. Preserve them unchanged unless the configured owner gives a new explicit legal instruction.
+
+Skill persistence may normalize regular-file modes or YAML serialization while preserving semantics. Invoke bundled Python scripts through the active Python interpreter; do not require an executable bit as a release invariant. Any stored/materialized change must still pass semantic, structural, privacy, snapshot, and behavioral gates before export.
 
 ## Public privacy incident protocol
 

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "skill": "analyze-redesign",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "sourceOfTruth": "installed-personal-skill",
   "syncDirection": "installed-to-github-only",
   "repositoryImportAllowed": false,
@@ -13,20 +13,20 @@
   "files": [
     {
       "path": "SKILL.md",
-      "sha256": "0ef831f1269d624b24daf2251b55c2ed5faeeff2b4d76989cf03fbab0a3ae030",
+      "sha256": "ad3c94d308f94d24c0f03ba1020c804f600be9e5682bbdd3c34b0abedf44224f",
       "size": 16441,
       "mode": "0644"
     },
     {
       "path": "VERSION",
-      "sha256": "c28fcca53637bc88e124af1725df13cb98c69dedefd62fb3cdbe1cdb6b760624",
+      "sha256": "fe840f52fb5578d3f77eb497115eb02c6036601c3a53e60df7995c7276baa77a",
       "size": 6,
       "mode": "0644"
     },
     {
       "path": "agents/openai.yaml",
-      "sha256": "04c7387673762b8304dab71377f2ff0025a63635c9fefed5ae907ed5d7f8ef1b",
-      "size": 645,
+      "sha256": "892c1f34ffc8ef68f888bcabd9ab88fe7f1763b01e9759b7b8587bd7fd43e2c1",
+      "size": 639,
       "mode": "0644"
     },
     {
@@ -43,13 +43,13 @@
     },
     {
       "path": "config/public-provenance.json",
-      "sha256": "3c2a42fd4fff619d1eb271613afb1376260d29f28592e3a121546c64b43ef345",
-      "size": 6564,
+      "sha256": "a9db5e496cbb9cb8b2a03cae525663bd4111f8d239dc0fc4fe80b48dc7655291",
+      "size": 6827,
       "mode": "0644"
     },
     {
       "path": "evals/behavior-scenarios.json",
-      "sha256": "2f95a3e94252df27e3314b389101504c82a58dee1c9ad5c96691d358e936cf7a",
+      "sha256": "0dae39b7fb391805d55badad5ca832181940c7769340530c1e27bb4a1c0085a8",
       "size": 14459,
       "mode": "0644"
     },
@@ -97,8 +97,8 @@
     },
     {
       "path": "references/evolution-safety.md",
-      "sha256": "66351da53c593b94b876c71dbd037082fa673b5631d81bcff16399e872092efa",
-      "size": 11633,
+      "sha256": "ccfbb8eda3fbb74e090cf0a14873c761608d400593a138c0fefbc22497fd8999",
+      "size": 11985,
       "mode": "0644"
     },
     {
@@ -177,37 +177,37 @@
       "path": "scripts/build_public_snapshot.py",
       "sha256": "0bfdf399e58d73eb4746f9cc46faf632a5dce2c825662317e96c4c2f18e257f2",
       "size": 5856,
-      "mode": "0755"
+      "mode": "0644"
     },
     {
       "path": "scripts/privacy_gate.py",
       "sha256": "a37e8540d6f44ea6b3a9c79c1879efbafcdc20fa1efcbad181e8c1ea1f2e314f",
       "size": 6735,
-      "mode": "0755"
+      "mode": "0644"
     },
     {
       "path": "scripts/reconcile_public_target.py",
       "sha256": "915fb8a4aa398d007df0e93d83a6a77f04e39e1ee9df334bc1451de77c2fcdd0",
       "size": 9130,
-      "mode": "0755"
+      "mode": "0644"
     },
     {
       "path": "scripts/test_distribution.py",
       "sha256": "96af756329b0f2d851d498f2c7de2427fe2ad88658a4955778ccc6e08d7e9a9e",
       "size": 6764,
-      "mode": "0755"
+      "mode": "0644"
     },
     {
       "path": "scripts/validate_evals.py",
       "sha256": "bf561a0352a8b81aa4d88e7e4e48a27d345520e7750ac77762fe3f2930009ee1",
       "size": 4681,
-      "mode": "0755"
+      "mode": "0644"
     },
     {
       "path": "scripts/validate_skill.py",
-      "sha256": "62e404178c715b3624a3268d788220e36dadff6eb76debaa2ffc7b3fcae7473b",
-      "size": 11745,
-      "mode": "0755"
+      "sha256": "6f66fe6e69b789f381b944df11c311423ee9a74d5fe600f8ff5e2934526096cd",
+      "size": 12360,
+      "mode": "0644"
     }
   ]
 }

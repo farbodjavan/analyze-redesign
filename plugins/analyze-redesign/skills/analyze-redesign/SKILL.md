@@ -2,7 +2,7 @@
 name: analyze-redesign
 description: Evidence-led product experience analysis, redesign, visual prototyping, implementation guidance, recovery, and design QA for websites, apps, games, dashboards, enterprise workflows, AI products, and design systems. Use for UX/UI audits, story-to-screen redesigns, journey or information-architecture repair, visual-system work, responsive/RTL/accessibility review, design-to-code fidelity, baseline recovery, owner-review packages, and continuation masters. Do not use as proof of real user research, legal compliance, production verification, or independent expert participation unless that evidence actually exists.
 metadata:
-  version: "2.0.0"
+  version: "2.0.1"
 ---
 
 # Analyze and Redesign
