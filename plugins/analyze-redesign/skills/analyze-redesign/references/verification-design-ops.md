@@ -15,7 +15,7 @@ Use this module to convert the redesign into reproducible evidence and a maintai
 
 Link each important decision through delivery:
 
-`evidence/finding → design decision → specification → implementation location → acceptance criterion → test/evidence → release status → metric`
+`promise/requirement → evidence/finding → owner/design decision → specification/artifact → implementation location → acceptance criterion → test/evidence → release status → metric`
 
 No high-priority recommendation is complete without an owner, dependency, acceptance criterion, and verification method. Mark checks as passed, failed, blocked, or not run; never collapse unknown into passed.
 
@@ -58,6 +58,7 @@ Use WCAG-EM sampling logic for formal accessibility evaluation. Sample selection
 4. Review hierarchy, alignment, rhythm, typography, contrast, clipping, overlap, focus, loading, and transition behavior.
 5. Confirm the fix at neighboring widths and states; a screenshot-specific patch is not complete.
 6. Update baselines only after the change is reviewed and explained.
+7. Tie an approved baseline to the exact artifact/build, capture conditions, and lock record. Praise of an adjacent screen or earlier version is not approval of the current baseline.
 
 ## Accessibility QA protocol
 
@@ -70,7 +71,7 @@ Use WCAG-EM sampling logic for formal accessibility evaluation. Sample selection
 
 ## Performance experience budget
 
-Treat performance as interaction design. Define budgets for critical web-vital targets, route/data latency, image and font payload, animation frame stability, main-thread work, memory where relevant, and slow-device/network behavior. Use current Web Vitals definitions and measure both lab and real-user data when available.
+Treat performance as interaction design. Define budgets for current Core Web Vitals including INP where web interaction responsiveness applies, route/data latency, image and font payload, animation or game frame stability, input latency, main-thread work, memory, thermal behavior where relevant, and slow-device/network behavior. Verify time-sensitive platform thresholds at use time and measure both lab and real-user data when available.
 
 Design the waiting experience by latency class:
 

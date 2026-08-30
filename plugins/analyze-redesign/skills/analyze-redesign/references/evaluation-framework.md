@@ -48,6 +48,8 @@ Record material findings with these fields:
 | Verification | Test, research, analytics, or review method |
 | Dependency/owner | Prerequisite and accountable role |
 | Lock impact | Approved element affected or preserved |
+| Trace | Linked requirement, decision, implementation, test, and metric IDs |
+| Review state | Proposed, owner review, accepted, superseded, or rejected |
 
 ## Severity rubric
 
@@ -65,6 +67,8 @@ Evaluate only dimensions that apply, but never omit a relevant structural dimens
 | Dimension | Core questions |
 |---|---|
 | Product fit | Does the experience support the promised user job and business outcome? |
+| Experience/story integrity | Do promise, pacing, agency, core loop, result, and reason to continue form a coherent causal experience? |
+| Evidence integrity | Are claims traceable, appropriately graded, current where needed, and separated from inference or simulation? |
 | Information architecture | Can users predict where things live and where outputs appear? |
 | Journey integrity | Can users enter, complete, recover, return, and exit every primary flow? |
 | Interaction | Are actions discoverable, reversible where appropriate, and acknowledged? |
@@ -78,6 +82,7 @@ Evaluate only dimensions that apply, but never omit a relevant structural dimens
 | Accessibility | Can users perceive, navigate, understand, and operate the experience with relevant assistive modes? |
 | Trust and safety | Are identity, provenance, permissions, destructive actions, privacy, and system status clear? |
 | Performance | Does perceived and measured performance support the task? |
+| Implementation fidelity | Does the running result preserve accepted behavior, visuals, states, data meaning, and platform behavior? |
 
 ## Scoring rules
 

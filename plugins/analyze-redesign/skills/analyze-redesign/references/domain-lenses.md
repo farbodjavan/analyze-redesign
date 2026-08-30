@@ -2,6 +2,8 @@
 
 Apply only the lenses relevant to the current product. Domain guidance changes priorities; it does not replace direct evidence, platform rules, accessibility, or jurisdiction-specific requirements.
 
+For deep work on games, use `game-experience.md` as the primary domain module. For deep enterprise, admin, dashboard, marketplace, data, or AI work, use `enterprise-data-ai.md`. The summaries below remain routing and cross-domain checks, not substitutes for those dedicated modules.
+
 ## Contents
 
 1. Marketing and growth

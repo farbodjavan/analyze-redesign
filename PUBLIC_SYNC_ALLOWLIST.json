@@ -28,6 +28,9 @@
     ".yaml",
     ".yml"
   ],
+  "allowedSkillBasenames": [
+    "VERSION"
+  ],
   "forbiddenPathParts": [
     ".env",
     "artifacts",

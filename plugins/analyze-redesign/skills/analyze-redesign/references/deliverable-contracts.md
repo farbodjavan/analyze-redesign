@@ -6,8 +6,10 @@ Choose the smallest contract that satisfies the request. Combine contracts for e
 
 - Quick audit
 - Deep audit
+- Experience architecture package
 - Redesign specification
 - Visual package
+- Owner-review checkpoint
 - Implemented redesign
 - QA evidence package
 - Continuation master
@@ -53,6 +55,20 @@ Include:
 
 Use exact labels and mappings. Provide recommended copy when wording is part of the problem.
 
+## Experience architecture package
+
+Use before screen redesign when the product promise, story, pacing, core loop, first-use path, role model, or result destination is unstable. Include:
+
+1. User promise, anti-goals, evidence, and success/guardrails
+2. Current and proposed value/experience architectures
+3. Story or service beat map and time-to-first-value path
+4. Core, session, progression/lifecycle, return, failure, and recovery loops
+5. Role, object, permission, state, and result-destination models
+6. Requirement-to-experience traceability and capability preservation map
+7. Key decisions, tradeoffs, unknowns, acceptance criteria, and owner-review questions
+
+Do not proceed to visual polish when the experience package still contains a blocking contradiction.
+
 ## Visual package
 
 Include only visuals that help review or implementation:
@@ -67,6 +83,21 @@ Include only visuals that help review or implementation:
 - asset manifest naming every file and its purpose
 
 Do not present a generated image as a functional build. Do not use mood art for exact interface measurements.
+
+## Owner-review checkpoint
+
+Include:
+
+1. The one decision being reviewed
+2. Exact baseline and accepted locks
+3. Artifact ID, fidelity label, version, and tested/captured context
+4. The real rendered artifact at the fidelity needed for the decision
+5. What changed, what remained, and what is intentionally non-functional
+6. Contradiction/craft check and known limits
+7. Requested outcome: accept, revise, reject, or hold
+8. The next state that will begin only after the required decision
+
+When staged approval was requested, do not bundle unreviewed later stages into the same checkpoint.
 
 ## Implemented redesign
 

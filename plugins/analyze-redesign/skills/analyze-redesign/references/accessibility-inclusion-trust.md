@@ -6,7 +6,8 @@ Use this module from discovery through QA. Accessibility and trust are product r
 
 - Identify platform, jurisdiction, procurement or policy obligations, user populations, assistive technologies, and required conformance target.
 - For web work, use WCAG 2.2 Level AA as a common product target unless a stricter or jurisdiction-specific requirement applies; do not equate that default with legal advice.
-- Use WCAG-EM to define scope and representative sampling for formal evaluation.
+- Use the current WCAG-EM 2.0 methodology to define scope and representative sampling for formal web evaluation. For native software and non-web documents, use WCAG2ICT 2.2 as informative interpretation alongside the applicable platform, procurement, and jurisdiction requirements.
+- Treat WCAG 3 as a working draft, not a current conformance target, until its standards status changes.
 - Record what was tested, by whom or by what tool, against which version, on which surfaces, and what remains untested.
 - Never claim compliance or certification from a heuristic review or automated scan.
 

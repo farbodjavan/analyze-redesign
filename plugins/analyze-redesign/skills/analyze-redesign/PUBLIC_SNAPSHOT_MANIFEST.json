@@ -1,186 +1,213 @@
 {
-  "schemaVersion": 2,
-  "skillName": "analyze-redesign",
-  "authority": "installed-personal-skill",
+  "schemaVersion": 1,
+  "skill": "analyze-redesign",
+  "version": "2.0.0",
+  "sourceOfTruth": "installed-personal-skill",
   "syncDirection": "installed-to-github-only",
   "repositoryImportAllowed": false,
-  "pluginVersion": "2.0.0",
-  "canonicalPath": "plugins/analyze-redesign/skills/analyze-redesign",
-  "sourceSnapshotManifest": "plugins/analyze-redesign/skills/analyze-redesign/PUBLIC_SNAPSHOT_MANIFEST.json",
-  "hashAlgorithm": "SHA-256",
-  "syncedOn": "2026-08-30",
-  "evolutionPolicy": "EVOLUTION_POLICY.md",
-  "privacyGate": ".github/scripts/privacy_gate.py",
-  "files": {
-    "PUBLIC_SNAPSHOT_MANIFEST.json": {
-      "sha256": "36c752b2c7db235e6e768b8a5ab3aef57bf052a5828ebb082fe8bacfef431ae9",
-      "size": 6505,
-      "mode": "100644"
-    },
-    "SKILL.md": {
+  "validation": {
+    "preExportReleaseGate": "passed",
+    "strictSnapshotPrivacy": "passed",
+    "snapshotIntegrity": "passed"
+  },
+  "files": [
+    {
+      "path": "SKILL.md",
       "sha256": "0ef831f1269d624b24daf2251b55c2ed5faeeff2b4d76989cf03fbab0a3ae030",
       "size": 16441,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "VERSION": {
+    {
+      "path": "VERSION",
       "sha256": "c28fcca53637bc88e124af1725df13cb98c69dedefd62fb3cdbe1cdb6b760624",
       "size": 6,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "agents/openai.yaml": {
+    {
+      "path": "agents/openai.yaml",
       "sha256": "04c7387673762b8304dab71377f2ff0025a63635c9fefed5ae907ed5d7f8ef1b",
       "size": 645,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "assets/icon.svg": {
+    {
+      "path": "assets/icon.svg",
       "sha256": "49315dda7125ec5fc77ef5f2b96126d8b2121c6e72944b4702972e90f321d3ee",
       "size": 1210,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "config/public-export.json": {
+    {
+      "path": "config/public-export.json",
       "sha256": "85a031deb43649603615d43454626ec2bc3e0f82c517ec61b8586c0b67af8741",
       "size": 1611,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "config/public-provenance.json": {
+    {
+      "path": "config/public-provenance.json",
       "sha256": "3c2a42fd4fff619d1eb271613afb1376260d29f28592e3a121546c64b43ef345",
       "size": 6564,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "evals/behavior-scenarios.json": {
+    {
+      "path": "evals/behavior-scenarios.json",
       "sha256": "2f95a3e94252df27e3314b389101504c82a58dee1c9ad5c96691d358e936cf7a",
       "size": 14459,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/accessibility-inclusion-trust.md": {
+    {
+      "path": "references/accessibility-inclusion-trust.md",
       "sha256": "afb841ac4dc8fd95807f5cff62feab5e4dd5f680403d8531903a5f84173752d9",
       "size": 7144,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/collaboration-contract.md": {
+    {
+      "path": "references/collaboration-contract.md",
       "sha256": "50f40587fdd8958f786abb7a49861b1964e2f02ba11cd4121786655ebaf4cd58",
       "size": 4908,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/deliverable-contracts.md": {
+    {
+      "path": "references/deliverable-contracts.md",
       "sha256": "92e94b09ed75e7e911e40ed2176f411c237e3d3f43b5add072d1bbf3fddb992b",
       "size": 5813,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/design-council.md": {
+    {
+      "path": "references/design-council.md",
       "sha256": "fda62167c65b54860803f8e98200316f369c25f1fcb255334156e49d8b7d6875",
       "size": 7274,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/domain-lenses.md": {
+    {
+      "path": "references/domain-lenses.md",
       "sha256": "752b8385f50c46c02e261d34d3ba56559b81c69385a62c70bb34891b40a41814",
       "size": 10582,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/enterprise-data-ai.md": {
+    {
+      "path": "references/enterprise-data-ai.md",
       "sha256": "fe68f4ad9d75c8b7b80e12534d9e1e267efab53dcc8b2a433a153a80a7772179",
       "size": 9618,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/evaluation-framework.md": {
+    {
+      "path": "references/evaluation-framework.md",
       "sha256": "b6637fc90e36afd9f859b74cd706d77df355243a66a94f3bdfc4fd34e83657df",
       "size": 7519,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/evolution-safety.md": {
+    {
+      "path": "references/evolution-safety.md",
       "sha256": "66351da53c593b94b876c71dbd037082fa673b5631d81bcff16399e872092efa",
       "size": 11633,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/game-experience.md": {
+    {
+      "path": "references/game-experience.md",
       "sha256": "4be17d68a1000b0b22604bae0daf6569c6e7bb4fd2640aaf3815108b3c9cc249",
       "size": 11349,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/implementation-recovery.md": {
+    {
+      "path": "references/implementation-recovery.md",
       "sha256": "dd78e65a6fb820c8422ceb432c8dbbe47c545dafe74fed84292707cfd8dafa1d",
       "size": 7256,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/interaction-content-service.md": {
+    {
+      "path": "references/interaction-content-service.md",
       "sha256": "39b44293581133a909a4dc8a849b71dbc89fae0340b2e3854db05ad705dd7909",
       "size": 6428,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/operating-system.md": {
+    {
+      "path": "references/operating-system.md",
       "sha256": "980bdd08c8bbb86a3d94a3c5e745cc7dad74cef0af53f3c4b6c28d80a6523fe0",
       "size": 7255,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/platform-responsive-localization.md": {
+    {
+      "path": "references/platform-responsive-localization.md",
       "sha256": "8dd0d3d3b7724db095a3e33ab7faf68495acfe91f6667ae88ceb3b5f80f45b2c",
       "size": 7452,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/project-control-plane.md": {
+    {
+      "path": "references/project-control-plane.md",
       "sha256": "3590d97456d81e0a5b93242f6164a3b5019f4124dc74fc8866d35d5e3919c825",
       "size": 5928,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/research-strategy-metrics.md": {
+    {
+      "path": "references/research-strategy-metrics.md",
       "sha256": "b7835fc0ad7fee808c4751cd07ae750168a27755dfd60d2712efc0e8fb41da8c",
       "size": 6865,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/source-registry.md": {
+    {
+      "path": "references/source-registry.md",
       "sha256": "a357d2044969e93069b7a9118d0cecfe633b7b6e6ac69c45e008f488c1797754",
       "size": 19363,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/story-experience-architecture.md": {
+    {
+      "path": "references/story-experience-architecture.md",
       "sha256": "04f41f465f7064e3cde1b95386c09be460dee44a3283c5081679b8dc6e0f163a",
       "size": 6555,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/verification-design-ops.md": {
+    {
+      "path": "references/verification-design-ops.md",
       "sha256": "b152b46945c084b407b2a518e780b19f5c29178c067c06e784d4eb67db45f2c3",
       "size": 7723,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/visual-prototyping.md": {
+    {
+      "path": "references/visual-prototyping.md",
       "sha256": "4d939a1b02f424a0d93a8744b47fc7d116fc810ac7922544b1d7f7cb8bd52c5d",
       "size": 6931,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "references/visual-systems-craft.md": {
+    {
+      "path": "references/visual-systems-craft.md",
       "sha256": "038fc5a019d32d14c7222287acfe88f97b146fb099ef62507f78d2493dd37616",
       "size": 6620,
-      "mode": "100644"
+      "mode": "0644"
     },
-    "scripts/build_public_snapshot.py": {
+    {
+      "path": "scripts/build_public_snapshot.py",
       "sha256": "0bfdf399e58d73eb4746f9cc46faf632a5dce2c825662317e96c4c2f18e257f2",
       "size": 5856,
-      "mode": "100755"
+      "mode": "0755"
     },
-    "scripts/privacy_gate.py": {
+    {
+      "path": "scripts/privacy_gate.py",
       "sha256": "a37e8540d6f44ea6b3a9c79c1879efbafcdc20fa1efcbad181e8c1ea1f2e314f",
       "size": 6735,
-      "mode": "100755"
+      "mode": "0755"
     },
-    "scripts/reconcile_public_target.py": {
+    {
+      "path": "scripts/reconcile_public_target.py",
       "sha256": "915fb8a4aa398d007df0e93d83a6a77f04e39e1ee9df334bc1451de77c2fcdd0",
       "size": 9130,
-      "mode": "100755"
+      "mode": "0755"
     },
-    "scripts/test_distribution.py": {
+    {
+      "path": "scripts/test_distribution.py",
       "sha256": "96af756329b0f2d851d498f2c7de2427fe2ad88658a4955778ccc6e08d7e9a9e",
       "size": 6764,
-      "mode": "100755"
+      "mode": "0755"
     },
-    "scripts/validate_evals.py": {
+    {
+      "path": "scripts/validate_evals.py",
       "sha256": "bf561a0352a8b81aa4d88e7e4e48a27d345520e7750ac77762fe3f2930009ee1",
       "size": 4681,
-      "mode": "100755"
+      "mode": "0755"
     },
-    "scripts/validate_skill.py": {
+    {
+      "path": "scripts/validate_skill.py",
       "sha256": "62e404178c715b3624a3268d788220e36dadff6eb76debaa2ffc7b3fcae7473b",
       "size": 11745,
-      "mode": "100755"
+      "mode": "0755"
     }
-  }
+  ]
 }

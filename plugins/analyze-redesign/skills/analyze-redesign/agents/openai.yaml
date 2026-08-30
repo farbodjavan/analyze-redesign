@@ -1,10 +1,9 @@
 interface:
-  display_name: تحلیل و ریدیزاین
-  short_description: شورای چندتخصصی برای تحلیل و ریدیزاین اجرایی
-  default_prompt: از $analyze-redesign برای ممیزی چندتخصصی و طراحی نسخهٔ اجرایی بهتر
-    این محصول استفاده کن.
-  icon_small: assets/icon.svg
-  icon_large: assets/icon.svg
+  display_name: "تحلیل و ریدیزاین"
+  short_description: "دیزاین‌اواس شواهدمحور از Story تا Build و QA"
+  default_prompt: "از $analyze-redesign در حالت Deep Pass استفاده کن؛ منبع حقیقت و قفل‌ها را مشخص کن، Story و تجربه را پیش از Screen بازبینی کن و ریدیزاین را با خروجی تصویری، معیار پذیرش و QA قابل‌ردیابی بساز."
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
 policy:
   products:
   - chatgpt

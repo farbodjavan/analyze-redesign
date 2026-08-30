@@ -67,7 +67,7 @@ Use layers that preserve intent:
 2. **Semantic:** text, surface, border, action, feedback, focus, data, density.
 3. **Component:** values used only when a component requires a stable exception.
 
-Define token name, type, value or alias, modes, description, status, and owner. Prefer aliases from component to semantic to primitive. Avoid values whose names encode appearance when their purpose is semantic. Keep design and code naming mappable and use DTCG-compatible formats when interoperability matters.
+Define token name, type, value or alias, modes, description, status, and owner. Prefer aliases from component to semantic to primitive. Avoid values whose names encode appearance when their purpose is semantic. Keep design and code naming mappable. When interoperability matters, target the stable DTCG 2025.10 reports registered in `source-registry.md`; do not implement a newer preview merely because its URL says “latest.”
 
 ## Component contract
 

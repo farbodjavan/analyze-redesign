@@ -2,6 +2,16 @@
 
 This log records only public, release-level changes. It never includes user prompts, project examples, private evaluation artifacts, account data, or unpublished sources.
 
+## 2.0.0 — 2026-08-30
+
+- Rebuilt the skill as a stage-controlled design operating system from frame and evidence through experience, structure, interaction, visual system, prototype, implementation, verification, and owner decision.
+- Added hard phase caps, a project control plane, baseline/lock/decision ledgers, and distinct read-only comparison, disposable reconstruction, and authorized restoration modes.
+- Added dedicated story and experience architecture, game/spatial/audio, enterprise/data/AI, visual prototyping, implementation fidelity, recovery, and collaboration modules.
+- Expanded the public registry to 95 authoritative sources and recorded stable-versus-draft status for time-sensitive standards.
+- Added 19 behavioral scenarios across 16 domains, including pinned safety-critical cases and an independent forward-test attestation.
+- Added a release-only pre-export gate, strict allowlisted snapshot builder, semantic-provenance attestation, redacted privacy self-tests, exact Git-head reconciliation, and public-history incident handling.
+- Preserved the proprietary license byte-for-byte and retained personal-skill-to-GitHub-only synchronization.
+
 ## 1.2.0 — 2026-08-26
 
 - Made the installed personal skill the sole authority for skill content and the public GitHub repository a downstream distribution only.
