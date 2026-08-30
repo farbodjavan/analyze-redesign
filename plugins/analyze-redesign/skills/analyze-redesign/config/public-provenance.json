@@ -2,9 +2,10 @@
   "schema_version": 1,
   "releases": [
     {
-      "version": "2.0.0",
+      "version": "2.0.1",
       "date": "2026-08-30",
       "capabilities": [
+        "Storage-neutral script execution that remains valid when skill persistence normalizes file modes or YAML serialization",
         "Stage-based design operating system with owner-decision gates and re-entry",
         "Project control plane for baselines, evidence, locks, decisions, coverage, and continuation",
         "Story, experience architecture, time-to-value, and core-loop redesign",
@@ -105,7 +106,7 @@
           "status": "passed",
           "reviewer_role": "independent read-only evaluator",
           "recorded": "2026-08-30",
-          "method": "Independent adversarial recheck of the safety-critical scenarios and every previously identified control gap.",
+          "method": "Independent read-only recheck of storage-normalized script execution, syntax validation, safety-critical scenarios, privacy controls, exact-target reconciliation, and normalized YAML compatibility.",
           "coverage": [
             "hard phase authorization caps",
             "capability preservation and access cost",
@@ -128,7 +129,7 @@
           "status": "passed",
           "reviewer_role": "maintaining agent",
           "recorded": "2026-08-30",
-          "method": "Manual semantic review of every allowlisted file, supplemented by strict identifier, path, credential, and private-data pattern scanning.",
+          "method": "Manual semantic review of the complete 2.0.1 diff and every allowlisted release path, supplemented by strict identifier, path, credential, symlink, and private-data pattern scanning.",
           "coverage": [
             "private-derived facts, examples, and structures",
             "project, account, and installed-skill identifiers",

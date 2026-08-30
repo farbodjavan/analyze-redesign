@@ -2,6 +2,13 @@
 
 This log records only public, release-level changes. It never includes user prompts, project examples, private evaluation artifacts, account data, or unpublished sources.
 
+## 2.0.1 — 2026-08-30
+
+- Made bundled Python tooling resilient to persistence layers that normalize executable bits or YAML serialization.
+- Replaced the executable-bit release invariant with regular-file, no-symlink, UTF-8, portable-shebang, and Python AST validation.
+- Confirmed explicit interpreter execution, all 19 behavioral scenarios across 16 domains, strict snapshot privacy, and exact Git-head reconciliation through an independent read-only patch review.
+- Preserved the proprietary license byte-for-byte and retained personal-skill-to-GitHub-only synchronization.
+
 ## 2.0.0 — 2026-08-30
 
 - Rebuilt the skill as a stage-controlled design operating system from frame and evidence through experience, structure, interaction, visual system, prototype, implementation, verification, and owner decision.

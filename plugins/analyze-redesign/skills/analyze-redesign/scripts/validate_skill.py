@@ -4,10 +4,10 @@
 from __future__ import annotations
 
 import argparse
+import ast
 import datetime as dt
 import json
 import re
-import stat
 import subprocess
 import sys
 from pathlib import Path, PurePosixPath
@@ -228,8 +228,22 @@ def main() -> int:
         script = root / "scripts" / script_name
         if not script.is_file():
             failures.append(f"missing script: {script_name}")
-        elif not (script.stat().st_mode & stat.S_IXUSR):
-            failures.append(f"script is not owner-executable: {script_name}")
+        elif script.is_symlink():
+            failures.append(f"script must not be symlinked: {script_name}")
+        else:
+            try:
+                source = script.read_text(encoding="utf-8")
+                first_line = source.splitlines()[0]
+            except (OSError, UnicodeDecodeError, IndexError):
+                source = ""
+                first_line = ""
+            if first_line != "#!/usr/bin/env python3":
+                failures.append(f"script must be UTF-8 Python with a portable shebang: {script_name}")
+            else:
+                try:
+                    ast.parse(source, filename=script_name)
+                except SyntaxError:
+                    failures.append(f"script must parse as Python: {script_name}")
 
     eval_ok, eval_output = run_check([sys.executable, "scripts/validate_evals.py", str(root)], root)
     if not eval_ok:
