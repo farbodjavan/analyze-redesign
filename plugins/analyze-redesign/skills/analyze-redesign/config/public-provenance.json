@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "releases": [
+    {
+      "version": "2.0.0",
+      "date": "2026-08-30",
+      "capabilities": [
+        "Stage-based design operating system with owner-decision gates and re-entry",
+        "Project control plane for baselines, evidence, locks, decisions, coverage, and continuation",
+        "Story, experience architecture, time-to-value, and core-loop redesign",
+        "Deep game, spatial, audio, save, accessibility, and performance lens",
+        "Deep enterprise, role, permission, data, dashboard, marketplace, and AI lens",
+        "Visual-fidelity and staged owner-review contracts",
+        "Implementation, recovery, design-to-code fidelity, and drift control",
+        "Behavioral forward-test corpus and deterministic outbound privacy tooling"
+      ],
+      "sources": [
+        {
+          "publisher": "W3C",
+          "title": "Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies",
+          "url": "https://www.w3.org/TR/wcag2ict-22/",
+          "status": "informative-note",
+          "accessed": "2026-08-30",
+          "affects": ["native accessibility scope", "evidence language"]
+        },
+        {
+          "publisher": "W3C",
+          "title": "WCAG Evaluation Methodology 2.0",
+          "url": "https://www.w3.org/TR/wcag-em-2/",
+          "status": "evaluation-methodology",
+          "accessed": "2026-08-30",
+          "affects": ["accessibility sampling", "evaluation reporting"]
+        },
+        {
+          "publisher": "W3C",
+          "title": "W3C Accessibility Guidelines 3.0 Working Draft",
+          "url": "https://www.w3.org/TR/wcag-3.0/",
+          "status": "draft-not-for-conformance",
+          "accessed": "2026-08-30",
+          "affects": ["source-status discipline"]
+        },
+        {
+          "publisher": "Android Developers",
+          "title": "Adaptive app quality guidelines",
+          "url": "https://developer.android.com/docs/quality-guidelines/adaptive-app-quality",
+          "status": "living-platform-guidance",
+          "accessed": "2026-08-30",
+          "affects": ["adaptive layouts", "device and input coverage"]
+        },
+        {
+          "publisher": "Android Developers",
+          "title": "Google Play Games guidelines",
+          "url": "https://developer.android.com/games/guidelines",
+          "status": "living-platform-guidance",
+          "accessed": "2026-08-30",
+          "affects": ["game quality", "frame performance evidence"]
+        },
+        {
+          "publisher": "Microsoft",
+          "title": "Xbox Accessibility Guidelines",
+          "url": "https://learn.microsoft.com/en-us/xbox/accessibility/guidelines",
+          "status": "living-platform-guidance",
+          "accessed": "2026-08-30",
+          "affects": ["game accessibility", "input and difficulty"]
+        },
+        {
+          "publisher": "Design Tokens Community Group",
+          "title": "Design Tokens Format Module 2025.10",
+          "url": "https://www.designtokens.org/TR/2025.10/format/",
+          "status": "stable-final-community-report",
+          "accessed": "2026-08-30",
+          "affects": ["token interoperability", "stable-versus-preview discipline"]
+        },
+        {
+          "publisher": "NIST",
+          "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+          "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+          "status": "official-risk-guidance",
+          "accessed": "2026-08-30",
+          "affects": ["AI risk", "evaluation and human control"]
+        },
+        {
+          "publisher": "C2PA",
+          "title": "C2PA Technical Specification 2.4",
+          "url": "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html",
+          "status": "technical-specification",
+          "accessed": "2026-08-30",
+          "affects": ["generated-media provenance", "trust presentation"]
+        },
+        {
+          "publisher": "European Commission",
+          "title": "European Accessibility Act",
+          "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en",
+          "status": "official-scope-overview",
+          "accessed": "2026-08-30",
+          "affects": ["jurisdiction-aware accessibility routing"]
+        }
+      ],
+      "validation": {
+        "source_state": "passed",
+        "privacy_gate": "passed",
+        "structural_validation": "passed",
+        "eval_schema": "passed",
+        "behavioral_forward_test": {
+          "status": "passed",
+          "reviewer_role": "independent read-only evaluator",
+          "recorded": "2026-08-30",
+          "method": "Independent adversarial recheck of the safety-critical scenarios and every previously identified control gap.",
+          "coverage": [
+            "hard phase authorization caps",
+            "capability preservation and access cost",
+            "recovery mutation boundaries",
+            "pre-export and post-build release gates",
+            "exact Git-head target reconciliation",
+            "privacy-history incident response"
+          ],
+          "evidence": [
+            "evals/behavior-scenarios.json",
+            "references/operating-system.md",
+            "references/enterprise-data-ai.md",
+            "references/implementation-recovery.md",
+            "references/evolution-safety.md",
+            "scripts/reconcile_public_target.py",
+            "scripts/test_distribution.py"
+          ]
+        },
+        "semantic_provenance_review": {
+          "status": "passed",
+          "reviewer_role": "maintaining agent",
+          "recorded": "2026-08-30",
+          "method": "Manual semantic review of every allowlisted file, supplemented by strict identifier, path, credential, and private-data pattern scanning.",
+          "coverage": [
+            "private-derived facts, examples, and structures",
+            "project, account, and installed-skill identifiers",
+            "credentials, local paths, and unpublished destinations",
+            "public-source provenance and status"
+          ],
+          "evidence": [
+            "config/public-export.json",
+            "references/evolution-safety.md",
+            "references/source-registry.md",
+            "evals/behavior-scenarios.json",
+            "scripts/privacy_gate.py"
+          ]
+        },
+        "pre_export": "passed"
+      }
+    }
+  ]
+}

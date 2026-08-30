@@ -1,7 +1,7 @@
 {
   "name": "analyze-redesign",
-  "version": "1.2.0",
-  "description": "Evidence-based, multidisciplinary UX/UI analysis and implementation-ready redesign workflows with privacy-gated public evolution.",
+  "version": "2.0.0",
+  "description": "Evidence-led product experience analysis, redesign, visual prototyping, implementation guidance, recovery, and design QA.",
   "author": {
     "name": "farbodjavan",
     "url": "https://github.com/farbodjavan"
@@ -15,18 +15,22 @@
     "design-systems",
     "accessibility",
     "rtl",
-    "redesign"
+    "redesign",
+    "game-design",
+    "enterprise-ux",
+    "ai-ux",
+    "design-qa"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Analyze & Redesign",
-    "shortDescription": "Multidisciplinary UX/UI audits and redesigns",
-    "longDescription": "Evidence-based product analysis, UX/UI audits, and implementation-ready redesigns with accessibility, localization, trust, metrics, QA, and privacy-gated public knowledge evolution.",
+    "shortDescription": "Design OS from story and evidence to build and QA",
+    "longDescription": "A stage-controlled design operating system for product analysis, story and experience architecture, UX/UI redesign, visual proof, implementation fidelity, recovery, accessibility, localization, and evidence-backed QA.",
     "developerName": "farbodjavan",
     "category": "Productivity",
     "websiteURL": "https://github.com/farbodjavan/analyze-redesign",
     "defaultPrompt": [
-      "Use @analyze-redesign to run a Deep Pass and produce an implementation-ready redesign with acceptance criteria and QA."
+      "Use @analyze-redesign in Deep Pass. Establish the source of truth and phase cap, repair story and experience before screens, then produce reviewable visual evidence, acceptance criteria, and QA."
     ],
     "brandColor": "#F75858",
     "composerIcon": "./skills/analyze-redesign/assets/icon.svg",

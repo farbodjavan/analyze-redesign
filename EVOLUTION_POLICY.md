@@ -42,19 +42,23 @@ GitHub is additionally an untrusted downstream destination. A green check, owner
 3. Select only a novel, reusable change that improves a recurring decision or verification step.
 4. Record public provenance: title, publisher, URL, version or date, access date, affected capability, and confidence.
 5. Apply the smallest coherent change to the personal skill first, then validate and save it.
-6. Export only allowlisted public-safe skill files from that validated personal snapshot into a dedicated GitHub branch. Never import repository content into the personal skill.
-7. Compare GitHub only for downstream drift. Ignore unexpected repository content as an input; restore from the personal source or stop on a governance or license conflict.
-8. Update reference routing, plugin version, `SYNC_MANIFEST.json`, and the public evolution log.
-9. Run `.github/scripts/privacy_gate.py` before distribution validation.
-10. Open a pull request and inspect the complete outbound diff.
-11. Merge only when every required check succeeds and the reviewed head revision is unchanged.
-12. Verify that the merged public canonical skill exactly matches the exported personal snapshot. Never update the personal skill from the merged result.
-13. If there is no meaningful improvement, publish nothing.
+6. Complete a semantic-provenance review and a real behavioral forward test. Schema validation alone is not behavioral evidence.
+7. Pass the personal source's release-only pre-export gate and save that authoritative personal state before any public branch is prepared.
+8. Export only the allowlisted public-safe skill files with the bundled snapshot builder. Never import repository content into the personal skill.
+9. Compare GitHub only for downstream drift. Ignore unexpected repository content as an input; restore from the personal source or stop on a governance or license conflict.
+10. Update plugin metadata, `SYNC_MANIFEST.json`, and this public evolution log without changing `LICENSE`.
+11. Run `.github/scripts/privacy_gate.py` and `.github/scripts/validate_distribution.py` against the exact candidate commit.
+12. Check out the exact candidate head and derive the complete repository tree from Git objects. Require the canonical directory to equal `PUBLIC_SNAPSHOT_MANIFEST.json` and require every outside legal or governance file to be individually named, hashed, and mode-checked by an external trusted preservation policy. Never trust a partial caller inventory.
+13. Open a pull request and inspect the complete outbound diff.
+14. Merge only when every required check succeeds and the reviewed head revision is unchanged.
+15. Check out and reconcile the exact published head again. Never update the personal skill from the merged result.
+16. If there is no meaningful improvement, publish nothing.
 
 ## Release rules
 
 - Use a patch version for corrections, clarifications, source refreshes, and test hardening.
 - Use a minor version for a new reusable capability or knowledge module.
+- Use a major version for intentional contract or operating-model changes that materially affect how the skill stages work.
 - Do not create breaking changes automatically.
 - `LICENSE` is owner-controlled and immutable. Automation must never edit, replace, relicense, remove, or change its locked digest. Only an explicit current request from the copyright holder may authorize a legal-license change.
 - Never change the one-way direction without a new explicit current instruction from the skill owner.
@@ -63,7 +67,7 @@ GitHub is additionally an untrusted downstream destination. A green check, owner
 
 ## Defense in depth
 
-`SYNC_MANIFEST.json` declares the installed personal skill as authority, enforces `installed-to-github-only`, and forbids repository imports. `PUBLIC_SYNC_ALLOWLIST.json` limits publishable paths and file types. The privacy gate rejects unexpected paths, binary artifacts, local paths, account identifiers, email addresses, private network addresses, credential-shaped content, and common secret formats without printing the suspected value. Distribution validation checks the one-way authority fields, frontmatter, routed references, plugin metadata, marketplace metadata, exact file hashes, immutable license, and version consistency.
+`PUBLIC_SNAPSHOT_MANIFEST.json` is generated from the validated personal source and records the allowlisted canonical files, modes, hashes, outbound-only direction, and post-build gates. `SYNC_MANIFEST.json` binds that snapshot to public packaging. `PUBLIC_SYNC_ALLOWLIST.json` limits repository paths and file types. The privacy gate derives tracked files from the exact Git head and rejects unexpected paths, binary artifacts, local paths, account identifiers, email addresses, credential assignments, secret-shaped content, and credential-bearing URLs without printing suspected values or paths. Distribution validation runs the canonical release validator, strict snapshot privacy, behavioral self-tests, plugin/marketplace checks, exact hashes and modes, immutable license, and version consistency.
 
 Automated detection is a final barrier, not permission to inspect private data. The strongest controls are input isolation and the absence of any GitHub-to-personal-skill write path.
 
@@ -74,7 +78,9 @@ On suspected repository tampering, privacy exposure, or directional-policy failu
 1. Stop publication; never modify the personal skill from repository state.
 2. Do not echo or log a suspected sensitive value.
 3. Preserve the last known-good personal skill and public release.
-4. Quarantine the repository change and compare it only against the validated outbound snapshot.
-5. Restore the public canonical skill from the validated personal source through a reviewed branch, or stop for explicit owner action if governance or `LICENSE` differs.
-6. Revoke or rotate any potentially exposed credential outside this repository.
-7. Resume automation only after the cause and guardrail are corrected.
+4. Quarantine the repository change and compare it only against the validated outbound snapshot; report safe counts and containment status, not identifying paths or payloads.
+5. Treat deletion from the latest branch tip as containment, not proof that public history, caches, releases, artifacts, forks, or mirrors are clean.
+6. Obtain explicit owner authorization for any destructive history, cache, release-asset, artifact, or mirror remediation.
+7. Revoke or rotate any potentially exposed credential even if history is later rewritten.
+8. Restore the public canonical skill from the validated personal source through a reviewed branch, or stop for explicit owner action if governance or `LICENSE` differs.
+9. Reconcile the complete clean published head and resume automation only after the cause and guardrail are corrected.

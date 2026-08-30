@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sync_direction": "installed-to-github-only",
+  "repository_import_allowed": false,
+  "source_of_truth": "installed-personal-skill",
+  "files": [
+    "SKILL.md",
+    "VERSION",
+    "agents/openai.yaml",
+    "assets/icon.svg",
+    "config/public-export.json",
+    "config/public-provenance.json",
+    "evals/behavior-scenarios.json",
+    "references/accessibility-inclusion-trust.md",
+    "references/collaboration-contract.md",
+    "references/deliverable-contracts.md",
+    "references/design-council.md",
+    "references/domain-lenses.md",
+    "references/enterprise-data-ai.md",
+    "references/evaluation-framework.md",
+    "references/evolution-safety.md",
+    "references/game-experience.md",
+    "references/implementation-recovery.md",
+    "references/interaction-content-service.md",
+    "references/operating-system.md",
+    "references/platform-responsive-localization.md",
+    "references/project-control-plane.md",
+    "references/research-strategy-metrics.md",
+    "references/source-registry.md",
+    "references/story-experience-architecture.md",
+    "references/verification-design-ops.md",
+    "references/visual-prototyping.md",
+    "references/visual-systems-craft.md",
+    "scripts/build_public_snapshot.py",
+    "scripts/privacy_gate.py",
+    "scripts/reconcile_public_target.py",
+    "scripts/test_distribution.py",
+    "scripts/validate_evals.py",
+    "scripts/validate_skill.py"
+  ],
+  "generated_files": [
+    "PUBLIC_SNAPSHOT_MANIFEST.json"
+  ],
+  "never_export": [
+    "private",
+    "project-data",
+    "captures",
+    "logs",
+    "tmp",
+    ".git"
+  ]
+}

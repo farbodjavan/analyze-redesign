@@ -6,18 +6,18 @@ Use this council to obtain multidisciplinary coverage without pretending that re
 
 | Lane | Specialist lenses | Primary question |
 | --- | --- | --- |
-| Direction | Product strategy, business model, service strategy | What outcome and operating model must the experience support? |
+| Direction | Product strategy, business model, service strategy, experience/narrative strategy | What promise, outcome, pacing, and operating model must the experience support? |
 | Evidence | UX research, behavioral science, analytics, experimentation | What is known, how strong is it, and what must be learned? |
 | Structure | Service design, information architecture, content modeling | How should the journey, channels, objects, and hierarchy fit together? |
 | Interaction | Task analysis, interaction design, prototyping, error recovery | Can people understand, complete, undo, and resume the work? |
 | Content | Content design, UX writing, terminology, conversational design | Does language help users predict and act? |
-| Surface | Visual design, art direction, typography, color, iconography, motion | Is attention guided with a coherent, legible, distinctive expression? |
+| Surface | Visual design, art direction, typography, color, iconography, motion, spatial/3D and audio direction | Is attention guided with a coherent, legible, distinctive expression across relevant senses and space? |
 | System | Design systems, tokens, component architecture, governance | Can the solution remain consistent and scale across teams and code? |
 | Inclusion | Accessibility, inclusive design, localization, RTL, low-literacy | Who is excluded by the current assumptions or implementation? |
 | Context | Web, iOS, Android, desktop, responsive and adaptive design | Does behavior fit the platform, device, input, and environment? |
 | Trust | Privacy, security UX, safety, ethics, policy | Can users understand consequences and retain meaningful control? |
 | Domain | Enterprise, commerce, marketplace, data, AI, game, learning | Which domain constraints change otherwise-valid advice? |
-| Delivery | UX engineering, performance, QA, metrics, design operations | Can the result be built, verified, measured, maintained, and evolved? |
+| Delivery | UX engineering, performance, recovery, QA, metrics, design operations | Can the result be built, recovered, verified, measured, maintained, and evolved? |
 
 ## Activation rules
 
@@ -31,6 +31,9 @@ Always activate product outcome, user task, interaction, content, accessibility,
 - Persian, Arabic, mixed-direction content, or multiple locales: localization, typography, RTL, and content.
 - Children, health, finance, identity, employment, public services, or regulated domains: deep trust, inclusion, privacy, safety, and jurisdiction-specific review.
 - Games: game UX, input remapping, sensory and cognitive accessibility, onboarding, and telemetry.
+- Slow time-to-value, weak story, or a rejected product direction: experience strategy, narrative/pacing, core-loop, and capability-preservation lenses.
+- Staged owner review or visual-pack delivery: prototyping fidelity, asset provenance, craft, implementation evidence, and lock-control lenses.
+- Recovery or conflicting versions: forensic baseline, change-control, regression, and evidence-integrity lenses.
 - Implementation: design systems, UX engineering, accessibility testing, performance, and regression QA.
 
 ## Stage gates
@@ -41,11 +44,12 @@ Do not advance a deep redesign while a blocking gate is unresolved.
 | --- | --- | --- |
 | 1. Context | Outcome, users, jobs, constraints, preserve locks, risks | No stable target or baseline |
 | 2. Evidence | Evidence ledger, source quality, unknowns, research needs | Core claims rely only on guesses |
-| 3. Structure | Journey, roles, IA, content model, state inventory | Key task has no coherent path or owner |
-| 4. Interaction and content | Task flow, actions, feedback, recovery, language | Critical action, error, or consequence is ambiguous |
-| 5. Visual and system | Composition, hierarchy, tokens, components, responsive rules | Direction cannot scale across required surfaces |
-| 6. Inclusion and trust | Accessibility, localization, privacy, safety review | Known severe exclusion or harmful pattern remains |
-| 7. Delivery and measurement | Acceptance criteria, test matrix, instrumentation, rollout | Result cannot be verified or success cannot be judged |
+| 3. Experience | Promise, story/service arc, agency, time-to-value, core/return loops | The intended experience is contradictory or delays its own value |
+| 4. Structure | Journey, roles, IA, content model, state inventory | Key task has no coherent path or owner |
+| 5. Interaction and content | Task flow, actions, feedback, recovery, language | Critical action, error, or consequence is ambiguous |
+| 6. Visual, system, and prototype | Composition, hierarchy, tokens, components, responsive rules, decision artifact | Direction cannot scale or the decision cannot be reviewed at honest fidelity |
+| 7. Inclusion and trust | Accessibility, localization, privacy, safety review | Known severe exclusion or harmful pattern remains |
+| 8. Delivery and measurement | Acceptance criteria, test matrix, implementation mapping, instrumentation, rollout | Result cannot be built, verified, recovered, or judged |
 
 ## Shared evidence ledger
 

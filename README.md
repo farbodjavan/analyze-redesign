@@ -1,18 +1,20 @@
 # Analyze & Redesign
 
-A reusable, evidence-based, multidisciplinary UX/UI analysis and redesign skill for ChatGPT and Codex.
+A stage-controlled, evidence-led product design operating system for ChatGPT and Codex.
 
-It combines product strategy, UX research, information architecture, interaction design, content design, visual craft, design systems, accessibility, inclusive design, localization and RTL, privacy and trust, AI UX, data visualization, ecommerce, enterprise workflows, games, performance, measurement, and design QA.
+It connects product strategy, story and experience architecture, UX research, IA, interaction and content design, visual craft, design systems, accessibility, localization and RTL, games and spatial experiences, enterprise/data/AI workflows, implementation fidelity, recovery, measurement, and design QA.
 
 ## What is included
 
-- A virtual design council with more than 50 specialist lenses
-- Seven stage gates from context and evidence through delivery and measurement
-- A curated registry of 75 authoritative sources
+- A virtual multidisciplinary council applied as separate evidence-led passes—not a claim of real independent experts
+- Ten controlled states: FRAME, EVIDENCE, EXPERIENCE, STRUCTURE, INTERACTION, VISUAL SYSTEM, PROTOTYPE, IMPLEMENTATION, VERIFICATION, and OWNER DECISION
+- Hard phase caps so audit, pre-design, design, implementation, and external-action authority cannot silently expand
+- A project control plane for baseline identity, evidence, locks, decisions, coverage, review, and continuation
+- A curated registry of 95 authoritative sources with stable, draft, preview, jurisdiction, and platform status
 - Deep support for Persian, Arabic-script typography, mixed-direction content, and RTL/LTR products
-- Domain lenses for enterprise, dashboards, ecommerce, marketplaces, government, regulated services, AI, games, learning, social products, developer tools, and publishing
-- Deliverable contracts for audits, redesign specifications, visual packs, implementations, QA evidence, and continuation masters
-- Explicit evidence grading, conflict adjudication, adversarial review, accessibility QA, performance checks, and release gates
+- Deep modules for story/experience, games and spatial/audio systems, enterprise/data/AI, visual prototyping, design-to-code fidelity, recovery, and multi-skill collaboration
+- Deliverable contracts for audits, experience architecture, redesign specifications, visual packs, implementations, QA evidence, owner review, and continuation masters
+- 19 behavioral scenarios across 16 domains, pinned safety cases, independent forward testing, semantic provenance, privacy self-tests, and exact Git-head distribution reconciliation
 
 The council is a structured multi-pass AI workflow. It does not claim that real designers, researchers, users, or independent reviewers participated.
 
@@ -25,9 +27,13 @@ plugins/analyze-redesign/
 ├── .codex-plugin/plugin.json
 └── skills/analyze-redesign/
     ├── SKILL.md
+    ├── VERSION
     ├── agents/openai.yaml
     ├── assets/icon.svg
-    └── references/
+    ├── config/
+    ├── evals/
+    ├── references/
+    └── scripts/
 ```
 
 The downstream public skill directory is:
@@ -36,7 +42,7 @@ The downstream public skill directory is:
 plugins/analyze-redesign/skills/analyze-redesign
 ```
 
-`SYNC_MANIFEST.json` records the SHA-256 digest of every public skill file and machine-declares `installed-to-github-only` synchronization. `PUBLIC_SYNC_ALLOWLIST.json` and the privacy gate restrict what can ever be published.
+The canonical directory contains `PUBLIC_SNAPSHOT_MANIFEST.json`, generated only after the personal source passes release, privacy, and integrity gates. `SYNC_MANIFEST.json` binds that snapshot to plugin packaging. `PUBLIC_SYNC_ALLOWLIST.json` and the repository privacy gate restrict what can be published.
 
 ## Install with Codex
 
@@ -67,20 +73,20 @@ https://github.com/farbodjavan/analyze-redesign/tree/main/plugins/analyze-redesi
 In ChatGPT:
 
 ```text
-@analyze-redesign Run a Deep Pass on this product. Identify root causes and produce an implementation-ready redesign with acceptance criteria and a QA plan.
+@analyze-redesign Run a Deep Pass. Establish the source of truth and phase cap, repair story and experience before screens, and produce reviewable visual evidence, acceptance criteria, and QA.
 ```
 
 In Codex:
 
 ```text
-$analyze-redesign Run a Deep Pass on this product and implement the approved redesign.
+$analyze-redesign Run a Deep Pass on this product and implement only the explicitly approved redesign scope.
 ```
 
 The skill can also activate implicitly when a request clearly asks for UX/UI analysis, audit, critique, repair, or redesign.
 
 ## فارسی
 
-این مخزن نسخهٔ قابل‌نصب اسکیل `analyze-redesign` را نگه می‌دارد. برای نصب در یک حساب دیگر، پوشهٔ اصلی اسکیل را دانلود و در ChatGPT Work همراه با `@skill-creator` نصب کنید. برای استفادهٔ تیمی و نسخه‌بندی‌شده، مخزن را به‌عنوان Plugin Marketplace به Codex اضافه کنید. چرخهٔ رشد فقط از منابع عمومی معتبر استفاده می‌کند و حق خواندن یا انتشار گفتگوها، فایل‌های شخصی، پروژه‌های خصوصی، اسکرین‌شات‌ها، داده‌های تحلیلی یا اطلاعات ورود را ندارد.
+این مخزن نسخهٔ قابل‌نصب اسکیل `analyze-redesign` را نگه می‌دارد. نسخهٔ ۲ آن یک سیستم‌عامل طراحی مرحله‌ای است: ابتدا منبع حقیقت، Story و معماری تجربه را روشن می‌کند؛ سپس فقط تا سقف مجاز وارد ساختار، تعامل، ویژوال، پروتوتایپ، پیاده‌سازی و QA می‌شود. برای نصب در یک حساب دیگر، پوشهٔ اصلی اسکیل را دانلود و در ChatGPT Work همراه با `@skill-creator` نصب کنید. برای استفادهٔ تیمی و نسخه‌بندی‌شده، مخزن را به‌عنوان Plugin Marketplace به Codex اضافه کنید. چرخهٔ رشد فقط از منابع عمومی معتبر استفاده می‌کند و حق خواندن یا انتشار گفتگوها، فایل‌های شخصی، پروژه‌های خصوصی، اسکرین‌شات‌ها، داده‌های تحلیلی یا اطلاعات ورود را ندارد.
 
 این مخزن متن‌باز نیست. نصب و استفاده از نسخهٔ رسمیِ دقیق و بدون تغییر مجاز است؛ هرگونه تغییر، اثر مشتق، فورک تغییریافته، پچ، Pull Request، بازنشر، فروش، میزبانی یا آینه‌سازی بدون اجازهٔ کتبی قبلی صاحب حق ممنوع است. متن کامل در [LICENSE](LICENSE) آمده است.
 
@@ -102,7 +108,7 @@ Independent public primary and authoritative sources may still support a skill i
 
 ## Safe autonomous evolution
 
-A scheduled maintainer periodically checks independent public primary and authoritative sources for genuinely reusable improvements. It updates, validates, and saves the personal skill first; then it exports only the allowlisted public-safe snapshot through a reviewable branch. It records public provenance, runs privacy and integrity gates, and publishes only after every check succeeds. It never imports repository content into the personal skill. If there is no material improvement, it creates no release.
+A scheduled maintainer periodically checks independent public primary and authoritative sources for genuinely reusable improvements. It updates, forward-tests, semantically reviews, validates, and saves the personal skill first; then it builds an allowlisted public-safe snapshot through a reviewable branch. It derives the complete candidate and published trees from exact Git heads, preserves locked legal/governance files by hash, and publishes only after every check succeeds. It never imports repository content into the personal skill. If there is no material improvement, it creates no release.
 
 This process does **not** train model weights or learn from private work. It is prohibited from reading or exporting chats, personal context, Library files, connected apps, private repositories, project files, screenshots, analytics, credentials, unpublished URLs, personal data, or customer data. See [EVOLUTION_POLICY.md](EVOLUTION_POLICY.md).
 
@@ -120,8 +126,10 @@ The distributed skill is generated from the validated canonical public skill and
 - required files and local reference routing
 - valid plugin and marketplace JSON
 - exact SHA-256 digests for every canonical skill file
+- canonical file modes and the generated snapshot manifest
 - an immutable SHA-256 lock for the repository license
 - machine-checked one-way authority metadata that forbids GitHub-to-personal-skill imports
 - a strict public-path and file-type allowlist
-- absence of credentials, local paths, personal-data indicators, and account-specific identifiers
-- public-only evolution provenance and rollback rules
+- absence of credentials, credential assignments, local paths, personal-data indicators, and account-specific identifiers
+- real behavioral and semantic-provenance attestations
+- exact Git-head reconciliation plus public-history incident and rollback rules
