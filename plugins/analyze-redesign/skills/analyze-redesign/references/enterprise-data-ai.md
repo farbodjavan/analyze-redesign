@@ -133,6 +133,27 @@ Prevent prompt injection and untrusted content from becoming instructions. Keep 
 
 Design graceful failure: preserve valid work, distinguish no result from system failure, make retry safety clear, offer non-AI/manual paths where stakes require them, and avoid confident filler.
 
+## Agentic action contract
+
+Use this contract when an AI system can plan across steps, invoke tools, delegate, retain memory, spend resources, or change an external system. A conversational surface alone does not make an experience safely agentic.
+
+Model each run as:
+
+`user-owned goal and scope → proposed plan → authority check → bounded execution → observable progress → result and action receipt → recovery or escalation`
+
+- **Choose the least agency that delivers the value.** Inventory every tool and action by data scope, privilege, externality, cost, reversibility, and failure radius. Prefer read-only, preview, recommendation, or draft modes before autonomous mutation.
+- **Keep intent separate from content.** Treat retrieved pages, documents, messages, tool results, memory, and peer-agent output as untrusted data. They may inform a plan but must not silently redefine the user's goal, authority, or policy.
+- **Bind authority to the exact action.** Show the actor, target, consequential parameters, data leaving the boundary, cost or commitment, and reversible/irreversible effect before a high-impact action. Re-authorize when the goal, recipient, destination, privilege, or impact changes; a generic chat approval is not a permanent mandate.
+- **Preview before commitment.** For consequential writes, provide a dry run, diff, recipient/target preview, or equivalent plan view. Approval must attach to the reviewed plan revision, expire when it changes materially, and never authorize hidden follow-on actions.
+- **Constrain execution outside the model.** Use deterministic policy enforcement, least-privilege and short-lived credentials, allowlisted destinations, typed tool contracts, rate/cost/time budgets, idempotency, circuit breakers, and fail-closed resolution for ambiguous tools or identities. UI confirmation cannot substitute for service-side authorization.
+- **Make delegation attributable.** Distinguish the user, orchestrator, sub-agent, tool, and external service; preserve scope through each handoff; prevent privilege inheritance by convenience; and expose the responsible actor for every consequential step.
+- **Make progress truthful and interruptible.** Show current stage, completed and pending actions, resource use where material, partial success, and what pause/cancel can still prevent. Do not present a plan as executed or a queued action as complete.
+- **Issue a usable receipt.** Record the approved goal and plan revision, action/target, authority source, material inputs and outputs, tool/service, status, time, cost where relevant, and recovery path without exposing secrets or unnecessary reasoning traces.
+- **Design real recovery.** Specify safe retry, rollback or compensating action, revocation, correction, incident escalation, and residual effects. Do not label a cosmetic UI reversal as undo when the external action remains active.
+- **Increase autonomy only from evidence.** Expand automation gradually when measured reliability, user control, and low failure consequence justify it; preserve an understandable manual path or human escalation for consequential work.
+
+Threat-model at least indirect prompt injection, goal hijack, excessive agency, tool misuse, identity/privilege abuse, poisoned memory/context, compromised tool or agent supply chain, insecure delegation, runaway cost or loops, cascading partial failure, and human-agent trust exploitation. Redesign findings should identify the user-visible control and the required service/security control separately. This review is not a penetration test, security certification, or compliance decision; route consequential systems to qualified security review.
+
 ## Marketplace and multi-sided systems
 
 Map every side's incentives, identity, supply/inventory, search/matching, ranking, communication, transaction, delivery, proof, reputation, dispute, cancellation, and retention. Show fees, obligations, status, visibility, and evidence from each role's perspective.
@@ -150,6 +171,7 @@ A redesign is not implementation-ready until:
 - critical tables/dashboards support real decisions and content extremes;
 - long-running, partial, stale, conflict, session-expiry, and recovery states exist;
 - AI outputs expose role, provenance, uncertainty, control, and failure behavior;
+- agentic runs preserve the user's goal, use least agency, bind approval to an exact plan/action, expose progress and receipts, and provide bounded recovery;
 - responsive, RTL/LTR, accessibility, performance, privacy, and telemetry are specified;
 - no capability disappeared solely as a cosmetic simplification;
 - acceptance criteria cover at least one full cross-role handoff and one costly failure/recovery journey.

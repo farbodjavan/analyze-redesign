@@ -2,7 +2,7 @@
 name: analyze-redesign
 description: Evidence-led product experience analysis, redesign, visual prototyping, implementation guidance, recovery, and design QA for websites, apps, games, dashboards, enterprise workflows, AI products, and design systems. Use for UX/UI audits, story-to-screen redesigns, journey or information-architecture repair, visual-system work, responsive/RTL/accessibility review, design-to-code fidelity, baseline recovery, owner-review packages, and continuation masters. Do not use as proof of real user research, legal compliance, production verification, or independent expert participation unless that evidence actually exists.
 metadata:
-  version: "2.0.1"
+  version: "2.1.0"
 ---
 
 # Analyze and Redesign
@@ -91,7 +91,7 @@ Read the smallest set that fully covers the task. For deep work, read every rele
 | Accessibility, inclusion, privacy, safety, ethics, trust | [references/accessibility-inclusion-trust.md](references/accessibility-inclusion-trust.md) |
 | Platform, responsive/adaptive, Persian, RTL/LTR, localization | [references/platform-responsive-localization.md](references/platform-responsive-localization.md) |
 | Games and interactive experiences | [references/game-experience.md](references/game-experience.md) |
-| Enterprise, admin, dashboard, data, marketplace, AI | [references/enterprise-data-ai.md](references/enterprise-data-ai.md) |
+| Enterprise, admin, dashboard, data, marketplace, AI, or agentic workflows | [references/enterprise-data-ai.md](references/enterprise-data-ai.md) |
 | Other product domains | [references/domain-lenses.md](references/domain-lenses.md) |
 | Code mapping, implementation, drift repair, recovery | [references/implementation-recovery.md](references/implementation-recovery.md) |
 | Test matrix, visual/accessibility QA, telemetry, release gates | [references/verification-design-ops.md](references/verification-design-ops.md) |

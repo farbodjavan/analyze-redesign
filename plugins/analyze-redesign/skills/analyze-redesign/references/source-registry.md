@@ -121,6 +121,8 @@ Study these systems comparatively. Borrow reasoning, architecture, state coverag
 | [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) | AI risk governance, mapping, measurement, and management. |
 | [NIST Generative AI Profile](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence) | Generative-AI-specific risk identification and management actions. |
 | [NIST Privacy Framework](https://www.nist.gov/privacy-framework) | Privacy risk identification and product/organizational controls. |
+| [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | Current industry threat framework for goal hijack, tool misuse, privilege abuse, memory/context poisoning, delegation, cascading failure, and human-agent trust exploitation; guidance, not proof of security or compliance. |
+| [OWASP GenAI LLM Top 10 2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) | Current LLM-application risk taxonomy including prompt injection, sensitive disclosure, excessive agency, hidden-context exposure, retrieval weaknesses, and improper output handling; use with system-specific threat modeling. |
 | [FTC: Bringing Dark Patterns to Light](https://www.ftc.gov/reports/bringing-dark-patterns-light) | Recognition of manipulative choice, consent, purchase, and cancellation flows. |
 | [Microsoft Inclusive Design](https://inclusive.microsoft.design/) | Designing for permanent, temporary, and situational exclusion. |
 | [Xbox Accessibility Guidelines](https://learn.microsoft.com/en-us/xbox/accessibility/guidelines) | Testable accessibility guidance for game features and input. |
@@ -164,7 +166,7 @@ Study these systems comparatively. Borrow reasoning, architecture, state coverag
 | Persian or Arabic | Unicode bidi, CLDR/LDML, ALReq, W3C i18n, target-platform typography and accessibility |
 | Enterprise or admin | ISO usability, complex-app heuristics, Carbon/Fluent/SAP/Atlassian comparisons, performance and QA |
 | Commerce or marketplace | Baymard, Polaris/eBay, trust/privacy, accessible forms, performance and measurement |
-| AI experience | HAX, PAIR, NIST AI RMF and Generative AI Profile, privacy, inclusive design, accessibility, provenance, human-control and evaluation sources |
+| AI experience | HAX, PAIR, NIST AI RMF and Generative AI Profile, privacy, inclusive design, accessibility, provenance, human-control and evaluation sources; add current OWASP LLM and Agentic guidance when tools, memory, delegation, or external actions are in scope |
 | Game | Current Xbox guidance, target-platform game quality, platform conventions, input/motion/audio/save coverage, telemetry and QA |
 | Government or regulated service | Jurisdiction-specific law plus GOV.UK/USWDS patterns, WCAG/WCAG-EM, WCAG2ICT where applicable, privacy, plain language, service design |
 
